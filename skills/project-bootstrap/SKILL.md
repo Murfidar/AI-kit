@@ -23,7 +23,15 @@ Inspect the project before proposing changes:
 4. Current folder architecture and naming conventions.
 5. Public surfaces: APIs, CLI, config, environment variables, deployment, database migrations, and generated files.
 
-Ask only the missing questions that affect workflow decisions.
+Then run a hybrid discovery interview:
+
+1. Infer obvious facts from files first.
+2. Ask only the missing questions that affect workflow decisions.
+3. Use `references/bootstrap-checkpoints.md` as the question bank for architecture, environment, branching, commits, PRs, verification, docs, generated files, conventions, and standard config.
+4. Present a final workflow profile before implementation with three groups: confirmed answers, inferred defaults, and unresolved decisions.
+5. Ask for approval of the workflow profile before writing or modifying files.
+
+Do not ask every checkpoint mechanically. If the repository already answers a question, record the inferred answer and ask only when the decision is ambiguous, risky, or preference-driven.
 
 ## Proposed Workflow
 
@@ -36,7 +44,8 @@ Present a short plan before implementation:
 5. Required verification commands for each touched surface.
 6. Documentation, changelog, and versioning triggers.
 7. Tooling to add or change: linting, formatting, typechecking, tests, hooks, commit rules, CI, changelog, release scripts, and architecture utilities.
-8. Risks, trade-offs, and migration steps.
+8. Project shape, important public surfaces, local environment rules, target file/folder architecture, coding conventions, generated-file rules, and compatibility constraints.
+9. Risks, trade-offs, and migration steps.
 
 Wait for user approval before implementation.
 
@@ -57,6 +66,7 @@ After approval:
 
 Load only the reference that matches the current task:
 
+- `references/bootstrap-checkpoints.md` for the hybrid discovery interview and final workflow profile.
 - `references/agents-template.md` for a strict root `AGENTS.md` template.
 - `references/claude-template.md` for a minimal Claude adapter.
 - `references/typescript-backend.md` for TypeScript Express/Fastify backend setup guidance.
@@ -70,3 +80,4 @@ Load only the reference that matches the current task:
 | Creating generic rules that do not match the stack | Inspect package scripts, config files, CI, and architecture first. |
 | Treating changelog/versioning as mandatory for every edit | Require it only for public behavior or project release rules. |
 | Leaving placeholders in templates | Fill project-specific commands and conventions before committing. |
+| Asking a long generic questionnaire | Inspect first, ask only missing high-impact questions, then confirm unresolved checkpoints. |

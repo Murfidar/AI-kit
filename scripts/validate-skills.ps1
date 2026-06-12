@@ -74,6 +74,7 @@ Assert-Skill 'project-bootstrap' @(
 
 @(
   'references/agents-template.md',
+  'references/bootstrap-checkpoints.md',
   'references/claude-template.md',
   'references/typescript-backend.md'
 ) | ForEach-Object {
