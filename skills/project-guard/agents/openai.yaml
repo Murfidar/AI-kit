@@ -1,4 +1,0 @@
-interface:
-  display_name: "Project Guard"
-  short_description: "Enforce project edit workflow"
-  default_prompt: "Use $project-guard before changing source, config, or test files."

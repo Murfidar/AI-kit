@@ -54,7 +54,6 @@ Run these commands before committing:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validate-skills.ps1
-python C:\Users\DELL\.codex\skills\.system\skill-creator\scripts\quick_validate.py .\skills\project-guard
 python C:\Users\DELL\.codex\skills\.system\skill-creator\scripts\quick_validate.py .\skills\project-bootstrap
 $tokens=$null; $errors=$null; [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path '.\scripts\install-skills.ps1'), [ref]$tokens, [ref]$errors) | Out-Null; if ($errors.Count -gt 0) { $errors | Format-List *; exit 1 }
 ```

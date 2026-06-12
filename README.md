@@ -4,7 +4,6 @@ Personal AI workflow skills and templates for keeping Codex and Claude aligned a
 
 ## Skills
 
-- `project-guard`: strict workflow guard for source, config, test, build, dependency, script, generated-code, and CI edits.
 - `project-bootstrap`: setup assistant for creating project workflow rules, tooling, templates, and conventions.
 
 ## Install
@@ -27,6 +26,5 @@ The installer creates symlinks into `C:\Users\<you>\.codex\skills` unless `CODEX
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validate-skills.ps1
-python C:\Users\DELL\.codex\skills\.system\skill-creator\scripts\quick_validate.py .\skills\project-guard
 python C:\Users\DELL\.codex\skills\.system\skill-creator\scripts\quick_validate.py .\skills\project-bootstrap
 ```

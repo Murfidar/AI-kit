@@ -6,7 +6,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-$skills = @('project-guard', 'project-bootstrap')
+$skills = @('project-bootstrap')
 $sourceRoot = Join-Path $RepoRoot 'skills'
 
 if (-not (Test-Path -LiteralPath $sourceRoot)) {
