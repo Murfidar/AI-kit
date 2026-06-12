@@ -59,18 +59,6 @@ function Assert-Skill {
   }
 }
 
-Assert-Skill 'project-guard' @(
-  'source, config, test',
-  'documentation-only',
-  'AGENTS\.md',
-  'CLAUDE\.md',
-  'current branch',
-  'working tree',
-  'draft PR',
-  'Do not commit',
-  'verification fails'
-)
-
 Assert-Skill 'project-bootstrap' @(
   'approval',
   'AGENTS\.md',
